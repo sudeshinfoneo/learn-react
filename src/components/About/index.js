@@ -12,11 +12,18 @@ const About = (props) => {
           <div className="card-body">
             <h4 className="card-title">Card title</h4>
             <p className="card-text">Some example text. </p>
-            <a href="#" className="card-link">Card link</a>
-            <a href="#" className="card-link">Another link</a>
           </div>
+          <div className="progress">
+    <div className="progress-bar" style="width:10%"></div>
+    </div><br></br>
+          <h6><span classNameName="badge bg-primary">Primary</span></h6>
+          <h6><span className="badge bg-secondary">Secondary</span></h6>
+          <h6><span className="badge bg-success">Success</span></h6>
+          <h6><span className="badge bg-danger">Danger</span></h6>
+   
         </div>
-      </div>
+      </div><br />
+
       <hr />
       <Link to="/">Back to home</Link></>
   )
