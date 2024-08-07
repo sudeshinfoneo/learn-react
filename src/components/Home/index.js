@@ -412,8 +412,52 @@ const Home = (props) => {
                 </span>
             </div>
         </a>
-        </div>
 
+        <a href="javascript:void(0)" class="insta-item">
+            <img src={Insta4} alt="" class="w-100" />
+            <div class="overlay">
+                <span>
+                    <i class="ti-heart"></i> 23
+                </span>
+                <span>
+                    <i class="ti-comment"></i> 12
+                </span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="insta-item">
+            <img src={Insta5} alt="" class="w-100" />
+            <div class="overlay">
+                <span>
+                    <i class="ti-heart"></i> 23
+                </span>
+                <span>
+                    <i class="ti-comment"></i> 12
+                </span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="insta-item">
+            <img src={Insta5} alt="" class="w-100" />
+            <div class="overlay">
+                <span>
+                    <i class="ti-heart"></i> 23
+                </span>
+                <span>
+                    <i class="ti-comment"></i> 12
+                </span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="insta-item">
+            <img src={Insta6} alt="" class="w-100" />
+            <div class="overlay">
+                <span>
+                    <i class="ti-heart"></i> 23
+                </span>
+                <span>
+                    <i class="ti-comment"></i> 12
+                </span>
+            </div>
+        </a>
+        </div>
 
         </>
     )
