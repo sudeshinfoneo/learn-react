@@ -22,17 +22,17 @@ import Insta6 from '../../assets/imgs/insta-6.jpg';
 const Home = (props) => {
     return (
         <>
-            <nav class="navbar navbar-light bg-light">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
+            <nav className="navbar navbar-light bg-light">
+                <div className="container">
+                    <a className="navbar-brand" href="#">
                         <img src={Logo} alt="" />
                     </a>
-                    <div class="socials">
-                        <a href="javascript:void(0)"><i class="ti-facebook"></i></a>
-                        <a href="javascript:void(0)"><i class="ti-twitter"></i></a>
-                        <a href="javascript:void(0)"><i class="ti-pinterest-alt"></i></a>
-                        <a href="javascript:void(0)"><i class="ti-instagram"></i></a>
-                        <a href="javascript:void(0)"><i class="ti-youtube"></i></a>
+                    <div className="socials">
+                        <a href="javascript:void(0)"><i className="ti-facebook"></i></a>
+                        <a href="javascript:void(0)"><i className="ti-twitter"></i></a>
+                        <a href="javascript:void(0)"><i className="ti-pinterest-alt"></i></a>
+                        <a href="javascript:void(0)"><i className="ti-instagram"></i></a>
+                        <a href="javascript:void(0)"><i className="ti-youtube"></i></a>
                     </div>
                 </div>
             </nav>
@@ -365,16 +365,54 @@ const Home = (props) => {
                     </div>      
                 </div> 
 
-                
+                <div className="media text-left mb-4">
+                    <a href="single-post.html" className="overlay-link"></a>
+                    <img className="mr-3" src={Blog1} width="100px" alt="Generic placeholder image" />
+                    <div className="media-body">
+                        <h6 className="mt-0">Nobis Mollitia</h6>
+                        <p className="mb-2"> deserunt quisqua...</p>
+                        <p className="text-muted small"><i className="ti-calendar pr-1"></i>  January 02 2019</p>
+                    </div>
                 </div>
+                <div className="media text-left mb-4">
+                    <a href="single-post.html" className="overlay-link"></a>
+                    <img className="mr-3" src={Blog2} width="100px" alt="Generic placeholder image" />
+                    <div className="media-body">
+                        <h6 className="mt-0">Officiis Laborum</h6>
+                        <p className="mb-2"> deserunt quisqua...</p>                            
+                        <p className="text-muted small"><i className="ti-calendar pr-1"></i>  January 10 2019</p>
+                    </div>
+                </div>
+                <div className="media text-left mb-4">
+                    <a href="single-post.html" className="overlay-link"></a>
+                    <img className="mr-3" src={Blog3} width="100px" alt="Generic placeholder image" />
+                    <div className="media-body">
+                        <h6 className="mt-0">Sapiente fugit vero</h6>
+                        <p className="mb-2"> deserunt ard quisqua...</p>                        
+                        <p className="text-muted small"><i className="ti-calendar pr-1"></i>  January 04 2019</p>
+                    </div>
+                </div>  
+                <div className="ad-card d-flex text-center align-items-center justify-content-center">
+                    <span href="#" className="font-weight-bold">ADS</span>
+                </div>
+            </div>
 
-
-
-
-
-
-
-
+            <div className="instagram-wrapper mt-5">
+        <div className="ig-id">
+            <a href="javascript:void(0)">Follow @joe_mitchell On Instagram</a>
+        </div>
+        <a href="javascript:void(0)" className="insta-item">
+            <img src={Insta1} alt="" className="w-100" />
+            <div className="overlay">
+                <span>
+                    <i className="ti-heart"></i> 23
+                </span>
+                <span>
+                    <i className="ti-comment"></i> 12
+                </span>
+            </div>
+        </a>
+        </div>
 
 
         </>
