@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import Contact from "./components/Contact"
-import Project from "./components/project"
+import Contact from "./components/Contact";
+import Project from "./components/project";
+import Sidebar from "./components/Sidebar";
 
 const Router = createBrowserRouter([
     {
@@ -21,6 +22,11 @@ const Router = createBrowserRouter([
         path: '/project',
         element: <Project />
     },
+    {
+        path: '/sidebar',
+        element: <Sidebar />
+    }
+
 
 ])
 
