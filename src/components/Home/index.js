@@ -18,65 +18,16 @@ import Insta3 from '../../assets/imgs/insta-3.jpg';
 import Insta4 from '../../assets/imgs/insta-4.jpg';
 import Insta5 from '../../assets/imgs/insta-5.jpg';
 import Insta6 from '../../assets/imgs/insta-6.jpg';
+import Header from "../Header";
+import Sidebar from "../Sidebar";
 
 const Home = (props) => {
     return (
         <>
-            <nav className="navbar navbar-light bg-light">
-                <div className="container">
-                    <a className="navbar-brand" href="#">
-                        <img src={Logo} alt="" />
-                    </a>
-                    <div className="socials">
-                        <a href="javascript:void(0)"><i className="ti-facebook"></i></a>
-                        <a href="javascript:void(0)"><i className="ti-twitter"></i></a>
-                        <a href="javascript:void(0)"><i className="ti-pinterest-alt"></i></a>
-                        <a href="javascript:void(0)"><i className="ti-instagram"></i></a>
-                        <a href="javascript:void(0)"><i className="ti-youtube"></i></a>
-                    </div>
-                </div>
-            </nav>
 
-            <nav className="navbar custom-navbar navbar-expand-md navbar-light bg-primary sticky-top">
-                <div className="container">
-                    <button className="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a className="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="no-sidebar.html">No Sidebar</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="single-post.html">Single Post</a>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="#">Action</a>
-                                    <a className="dropdown-item" href="#">Another action</a>
-                                    <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link disabled" href="#">Disabled</a>
-                            </li>
-                        </ul>
-                        <div className="navbar-nav ml-auto">
-                            <li className="nav-item">
-                                <a href="components.html" className="ml-4 btn btn-dark mt-1 btn-sm">Components</a>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <header className="page-header">
 
+            </header>
             <div className="container">
                 <section>
                     <div className="feature-posts">
@@ -102,8 +53,6 @@ const Home = (props) => {
                     </div>
                 </section>
                 <hr />
-
-
                 <div className="page-container">
                     <div className="page-content">
                         <div className="card">
@@ -128,7 +77,6 @@ const Home = (props) => {
                             </div>
                         </div>
                         <hr />
-
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="card text-center mb-5">
@@ -269,13 +217,10 @@ const Home = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <button className="btn btn-primary btn-block my-4">Load More Posts</button>
                     </div>
+
                 </div>
             </div>
-
-            <Link to="/sidebar"></Link>
-
         </>
     )
 }
