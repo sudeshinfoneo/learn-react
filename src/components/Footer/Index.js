@@ -12,9 +12,7 @@ const Footer = (props) => {
                         <a href="https://www.devcrud.com" class="text-muted font-weight-bold" target="_blank">DevCrud.</a>  All rights reserved </p>
                 </div>
             </footer>
-
         </>
-
     )
 }
 
