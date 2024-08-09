@@ -5,7 +5,8 @@ const Contact = (props) => {
 
     return (
         <>
-            <p>Contact Form</p>
+            <main id="main" />
+            
        
 
               

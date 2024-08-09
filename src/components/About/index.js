@@ -5,6 +5,11 @@ import Land1 from '../../assets/imgs/post-landscape-1.jpg'
 import Portrait3 from '../../assets/imgs/post-portrait-3.jpg'
 import Protrait4 from '../../assets/imgs/post-portrait-4.jpg'
 import Person1 from '../../assets/imgs/person-1.jpg'
+import Person2 from '../../assets/imgs/person-2.jpg'
+import Person3 from '../../assets/imgs/person-3.jpg'
+import Person4 from '../../assets/imgs/person-4.jpg'
+import Person5 from '../../assets/imgs/person-5.jpg'
+import Person6 from '../../assets/imgs/person-6.jpg'
 
 const About = (props) => {
   return (
@@ -86,7 +91,7 @@ const About = (props) => {
               <div className="row-justify-content-center">
                 <div className="col-lg-6">
                   <h2 className="display 4">Our team</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sint sed, fugit distinctio ad eius itaque deserunt 
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sint sed, fugit distinctio ad eius itaque deserunt
                     doloribus harum excepturi laudantium sit officiis et eaque blanditiis. Dolore natus excepturi recusandae.</p>
                 </div>
               </div>
@@ -94,14 +99,58 @@ const About = (props) => {
             <div className="col-lg-4 text-center mb-5">
               <img src={Person1} alt="" className="img-fluid rounded-circle w-50 mb-4" />
               <h4>Cameron Williamson</h4>
-              <span class="d-block mb-3 text-uppercase">Founder &amp; CEO</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non 
-              ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora 
-              earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+              <span className="d-block mb-3 text-uppercase">Founder &amp; CEO</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non
+                ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora
+                earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
             </div>
+            <div className="col-lg-4 text-center mb-5">
+              <img src={Person2} alt="" className="img-fluid rounded-circle w-50 mb-4" />
+              <h4>Wade Warren</h4>
+              <span className="d-block mb-3 text-uppercase">Founder VP</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam 
+                at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, 
+                culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+            </div>
+            <div className="col-lg-4 text-center mb-5">
+              <img src={Person3} alt="" className="img-fluid rounded-circle w-50 mb-4" />
+              <h4>Jane Cooper</h4>
+              <span className="d-block mb-3 text-uppercase">Editor Staff</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at 
+                itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, 
+                culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+            </div>
+            <div className="col-lg-4 text-center mb-5">
+              <img src={Person4} alt="" className="img-fluid rounded-circle w-50 mb-4" />
+              <h4>Cameron Williamson</h4>
+              <span className="d-block mb-3 text-uppercase">Editor Staff</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at 
+                itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, 
+                culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+            </div>
+            
+            <div className="col-lg-4 text-center mb-5">
+              <img src={Person5} alt="" className="img-fluid rounded-circle w-50 mb-4" />
+              <h4>Cameron Williamson</h4>
+              <span className="d-block mb-3 text-uppercase">Editor Staff</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at 
+                itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, 
+                culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+            </div>
+            
+            <div className="col-lg-4 text-center mb-5">
+              <img src={Person6} alt="" className="img-fluid rounded-circle w-50 mb-4" />
+              <h4>Cameron Williamson</h4>
+              <span className="d-block mb-3 text-uppercase">Editor Staff</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at 
+                itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, 
+                culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+            </div>
+            
+
           </div>
         </div>
-        
+
       </section>
 
 
