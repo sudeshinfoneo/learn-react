@@ -4,6 +4,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Project from "./components/project";
 import Sidebar from "./components/Sidebar";
+import Users from "./components/Users";
 
 const Router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const Router = createBrowserRouter([
     {
         path: '/sidebar',
         element: <Sidebar />
+    },
+    {
+        path: '/users',
+        element: <Users />
     }
 
 

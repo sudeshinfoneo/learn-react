@@ -18,8 +18,10 @@ const Header = (props) => {
                             </li>
                             <li className="nav-item">
                                 <Link to="contact" className="nav-link">Contact us</Link>
-                            </li>                            
-                            
+                            </li>
+                            <li className="nav-item">
+                                <Link to="users" className="nav-link">Users</Link>
+                            </li>
                         </ul>
                         <div className="navbar-nav ml-auto">
                             <li className="nav-item">

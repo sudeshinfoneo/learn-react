@@ -5,7 +5,9 @@ import Img3 from '../../assets/imgs/img-3.jpg';
 import Img4 from '../../assets/imgs/img-4.jpg';
 import Blog6 from '../../assets/imgs/blog-6.jpg';
 import PostCard from "./PostCard";
+import Users from "../Users";
 import { useEffect, useState } from "react";
+
 
 const Home = (props) => {
     const [post, setPost] = useState([])
@@ -14,9 +16,9 @@ const Home = (props) => {
        fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json()).then(data => {
         setPost(data)
        })
-    },[])
-
-   
+    },[])    
+    
+  
     return (
         <>
 
@@ -73,6 +75,9 @@ const Home = (props) => {
                         </div>
                         <hr />
                         <PostCard data={post} />
+                    
+                
+                        
                         
                         
                     </div>
