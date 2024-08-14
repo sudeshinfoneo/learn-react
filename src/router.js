@@ -5,6 +5,8 @@ import Contact from "./components/Contact";
 import Project from "./components/project";
 import Sidebar from "./components/Sidebar";
 import Users from "./components/Users";
+import Todos from "./components/Todos";
+import Album from "./components/Album";
 
 const Router = createBrowserRouter([
     {
@@ -33,7 +35,11 @@ const Router = createBrowserRouter([
     },
     {
         path: '/todos',
-        element: <todos />
+        element: <Todos />
+    },
+    {
+        path: '/album',
+        element: <Album />
     }
 
 

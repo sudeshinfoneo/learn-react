@@ -18,21 +18,13 @@ const Todos = (props) => {
                     todos && todos.map((el, index) => (
                         <>
                             <h5 key={index}>My To Do List {el.title} </h5>
-                            <input type="text" id="myInput" placeholder="Title..." />
+                            {el.completed ? (<p style={{ color: 'green' }}>Completed</p>) : (<p style={{ color: 'red' }}>Not Completed</p>)}
                         </>
                     ))
                 }
             </div>
 
-            <ul id="myUL">
-                <li className="checked">Pay bills</li>
-                <li>Meet George</li>
-                <li>Buy eggs </li>
-                <li>Read a book</li>
-                <li>Organize office</li>
 
-
-            </ul>
         </>
     )
 }

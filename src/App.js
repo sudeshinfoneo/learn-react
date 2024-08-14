@@ -9,6 +9,7 @@ import Sidebar from './components/Sidebar/index';
 import './assets/css/joeblog.css';
 import Users from './components/Users';
 import Todos from './components/Todos';
+import Album from './components/Album';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path='/users' element={<Users />} />
           <Route path='/todos' element={<Todos />} />
+          <Route path='/album' element={<Album />} />
         </Routes>
       </main>
       <Footer />
