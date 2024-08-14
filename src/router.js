@@ -30,6 +30,10 @@ const Router = createBrowserRouter([
     {
         path: '/users',
         element: <Users />
+    },
+    {
+        path: '/todos',
+        element: <todos />
     }
 
 

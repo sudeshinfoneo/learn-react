@@ -8,6 +8,7 @@ import Footer from './components/Footer/Index';
 import Sidebar from './components/Sidebar/index';
 import './assets/css/joeblog.css';
 import Users from './components/Users';
+import Todos from './components/Todos';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path='/users' element={<Users />} />
+          <Route path='/todos' element={<Todos />} />
         </Routes>
       </main>
       <Footer />
