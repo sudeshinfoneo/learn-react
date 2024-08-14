@@ -14,14 +14,18 @@ const Album = (props) => {
     return (
         <>
             <div className="container">
-                {
-                    album && album.map((el, index) => (
-                        <>
-                            <img src={Alb} className="img-fluid" alt="" key={index} />
-                            <h3> {el.title}</h3>
-                        </>
-                    ))
-                }
+                <div className='row'>
+                    {
+                        album && album.map((el, index) => (
+                            <>
+                                <div className='col-md-3'>
+                                    <img src={Alb} className="img-fluid" alt="" key={index} />
+                                    <h3> {el.title}</h3>
+                                </div>
+                            </>
+                        ))
+                    }
+                </div>
             </div>
         </>
     )
