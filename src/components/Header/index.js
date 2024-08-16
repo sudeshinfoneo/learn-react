@@ -34,6 +34,9 @@ const Header = (props) => {
                             <li className="nav-item">
                                 <Link to="/practice" className="nav-link">Practice</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to="/call" className="nav-link">Call</Link>
+                            </li>
                         </ul>
                         <div className="navbar-nav ml-auto">
                             <li className="nav-item">

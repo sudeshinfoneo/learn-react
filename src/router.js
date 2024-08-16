@@ -8,6 +8,7 @@ import Todos from "./components/Todos";
 import Album from "./components/Album";
 import Photo from "./components/Photo";
 import Practice from "./components/Practice";
+import Call from "./components/Call";
 
 const Router = createBrowserRouter([
     {
@@ -45,8 +46,11 @@ const Router = createBrowserRouter([
     {
         path: '/practice',
         element: <Practice />
+    },
+    {
+        path: '/call',
+        element: <Call />
     }
-
 
 ])
 

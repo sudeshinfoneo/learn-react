@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Avatar1 from '../../assets/imgs/avatar-1.jpg'
 
-
 const Practice = (props) => {
 
     return (
@@ -16,6 +15,8 @@ const Practice = (props) => {
                     </div>
                 </div>
             </div>
+        <hr />
+
         </>
     )
 }
