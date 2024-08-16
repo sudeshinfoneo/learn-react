@@ -16,8 +16,7 @@ const Todos = (props) => {
             <div id="myDIV">
                 {
                     todos && todos.map((el, index) => (
-                        <>
-                        
+                        <>                        
                             <h5 key={index}>My To Do List {el.title} </h5>
                             {el.completed ? (<p style={{ color: 'green' }}>Completed</p>) : (<p style={{ color: 'red' }}>Not Completed</p>)}
                         </>

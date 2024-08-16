@@ -2,11 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Project from "./components/project";
 import Sidebar from "./components/Sidebar";
 import Users from "./components/Users";
 import Todos from "./components/Todos";
 import Album from "./components/Album";
+import Photo from "./components/Photo";
+import Practice from "./components/Practice";
 
 const Router = createBrowserRouter([
     {
@@ -20,10 +21,6 @@ const Router = createBrowserRouter([
     {
         path: '/contact',
         element: <Contact />
-    },
-    {
-        path: '/project',
-        element: <Project />
     },
     {
         path: '/sidebar',
@@ -40,6 +37,14 @@ const Router = createBrowserRouter([
     {
         path: '/album',
         element: <Album />
+    },
+    {
+        path: '/photo',
+        element: <Photo />
+    },
+    {
+        path: '/practice',
+        element: <Practice />
     }
 
 

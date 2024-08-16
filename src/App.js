@@ -6,10 +6,12 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer/Index';
 import Sidebar from './components/Sidebar/index';
-import './assets/css/joeblog.css';
 import Users from './components/Users';
 import Todos from './components/Todos';
 import Album from './components/Album';
+import Photo from './components/Photo';
+import './assets/css/joeblog.css';
+import Practice from './components/Practice';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path='/users' element={<Users />} />
           <Route path='/todos' element={<Todos />} />
           <Route path='/album' element={<Album />} />
+          <Route path='/photo' element={<Photo />} />
+          <Route path='/practice' element={<Practice />} />
         </Routes>
       </main>
       <Footer />

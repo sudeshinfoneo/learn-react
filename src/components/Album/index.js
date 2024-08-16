@@ -19,7 +19,7 @@ const Album = (props) => {
                         album && album.map((el, index) => (
                             <>
                                 <div className='col-md-4'>
-                                    <img src={Alb} className="rounded-circle" alt="" key={index} style={{width: 350, height: 200}}/>
+                                    <img src={Alb} className="rounded-circle" alt="" key={index} style={{width: 350, height: 250}}/>
                                     <h3> {el.title}</h3>
                                 </div>
                             </>
