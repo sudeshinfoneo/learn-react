@@ -14,9 +14,9 @@ const Home = (props) => {
        fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json()).then(data => {
         setPost(data)
        })
-    },[])
-
-   
+    },[])    
+    
+  
     return (
         <>
 
@@ -73,6 +73,9 @@ const Home = (props) => {
                         </div>
                         <hr />
                         <PostCard data={post} />
+                    
+                
+                        
                         
                         
                     </div>

@@ -1,7 +1,7 @@
 import Blog2 from '../../assets/imgs/blog-2.jpg';
 
 const PostCard = (props) => {
-    const { data } = props
+    const { data } = props    
 
     return (
         <>

@@ -2,8 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Project from "./components/project";
 import Sidebar from "./components/Sidebar";
+import Users from "./components/Users";
+import Todos from "./components/Todos";
+import Album from "./components/Album";
+import Photo from "./components/Photo";
+import Practice from "./components/Practice";
+import Counter from "./components/Counter";
 
 const Router = createBrowserRouter([
     {
@@ -19,14 +24,33 @@ const Router = createBrowserRouter([
         element: <Contact />
     },
     {
-        path: '/project',
-        element: <Project />
-    },
-    {
         path: '/sidebar',
         element: <Sidebar />
+    },
+    {
+        path: '/users',
+        element: <Users />
+    },
+    {
+        path: '/todos',
+        element: <Todos />
+    },
+    {
+        path: '/album',
+        element: <Album />
+    },
+    {
+        path: '/photo',
+        element: <Photo />
+    },
+    {
+        path: '/practice',
+        element: <Practice />
+    },
+    {
+        path: '/call',
+        element: <Counter />
     }
-
 
 ])
 

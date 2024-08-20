@@ -12,7 +12,6 @@ import Blog1 from '../../assets/imgs/blog-1.jpg';
 import Blog2 from '../../assets/imgs/blog-2.jpg';
 import Blog3 from '../../assets/imgs/blog-3.jpg';
 
-
 const Sidebar = (props) => {
     return (
         <>

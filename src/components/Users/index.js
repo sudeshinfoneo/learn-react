@@ -1,5 +1,14 @@
+import { useEffect, useState } from "react"
+
 const Users = (props) => {
-    // create state to store ata
+    // create state to store data
+    const [users, setUsers] = useState([])
+
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()).then(data => {
+            setUsers(data)
+        })
+    }, [])
 
     // create useEffect hook to get data and list
     return (
@@ -7,7 +16,7 @@ const Users = (props) => {
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">SNo</th>
                         <th scope="col">Name</th>
                         <th scope="col">Username</th>
                         <th scope="col">Email</th>
@@ -15,27 +24,23 @@ const Users = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                    </tr>
+                    {
+                        users && users.map((el, index) => (
+                         <>
+                                <tr key={index}> 
+                                    <th scope="row">1</th>
+                                    <td>John { el.name }</td>
+                                    <td>Doe { el.username }</td>
+                                    <td>john@example.com { el.email }</td>
+                                    <td>12345 { el.address.city }</td>
+                                </tr>
+
+                              
+                            </>
+                        ))
+                    }
+                           
+                        
                 </tbody>
             </table>
         </>

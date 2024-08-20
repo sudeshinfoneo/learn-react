@@ -17,9 +17,26 @@ const Header = (props) => {
                                 <Link to="/about" className="nav-link">About us</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="contact" className="nav-link">Contact us</Link>
-                            </li>                            
-                            
+                                <Link to="/contact" className="nav-link">Contact us</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/users" className="nav-link">Users</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/todos" className="nav-link">Todos</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/photo" className="nav-link">Photo</Link>
+                            </li>
+                            <li className="=nav-item">
+                                <Link to="/album" className="nav-link">Album</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/practice" className="nav-link">Practice</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/counter" className="nav-link">Counter</Link>
+                            </li>
                         </ul>
                         <div className="navbar-nav ml-auto">
                             <li className="nav-item">
