@@ -13,6 +13,8 @@ import Photo from './components/Photo';
 import './assets/css/joeblog.css';
 import Practice from './components/Practice';
 import Counter from './components/Counter'
+import Product from './components/Product';
+
 
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
           <Route path='/photo' element={<Photo />} />
           <Route path='/practice' element={<Practice />} />
           <Route path='/counter' element= {<Counter />} />
+          <Route path='/product' element={<Product />} />
         </Routes>
       </main>
       <Footer />

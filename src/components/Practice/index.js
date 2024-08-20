@@ -17,6 +17,7 @@ const Practice = (props) => {
             </div>
         <hr />
 
+
         </>
     )
 }

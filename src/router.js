@@ -9,6 +9,7 @@ import Album from "./components/Album";
 import Photo from "./components/Photo";
 import Practice from "./components/Practice";
 import Counter from "./components/Counter";
+import Product from "./components/Product";
 
 const Router = createBrowserRouter([
     {
@@ -48,8 +49,12 @@ const Router = createBrowserRouter([
         element: <Practice />
     },
     {
-        path: '/call',
+        path: '/counter',
         element: <Counter />
+    },
+    {
+        path: '/product',
+        element: <Product />
     }
 
 ])
