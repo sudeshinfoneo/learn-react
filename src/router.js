@@ -8,7 +8,7 @@ import Todos from "./components/Todos";
 import Album from "./components/Album";
 import Photo from "./components/Photo";
 import Practice from "./components/Practice";
-import Call from "./components/Call";
+import Counter from "./components/Counter";
 
 const Router = createBrowserRouter([
     {
@@ -49,7 +49,7 @@ const Router = createBrowserRouter([
     },
     {
         path: '/call',
-        element: <Call />
+        element: <Counter />
     }
 
 ])

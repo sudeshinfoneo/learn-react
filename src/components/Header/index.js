@@ -35,7 +35,7 @@ const Header = (props) => {
                                 <Link to="/practice" className="nav-link">Practice</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/call" className="nav-link">Call</Link>
+                                <Link to="/counter" className="nav-link">Counter</Link>
                             </li>
                         </ul>
                         <div className="navbar-nav ml-auto">
