@@ -12,13 +12,13 @@ const Product = (props) => {
 
     return (
         <>
-            <div class="container mt-6">
-                <div class="row g-4">
+            <div className="container mt-4">
+                <div className="row g-4">
                     {
                         product && product.map((el, index) => (
                             <div className="card-body" style={{ width: 250 }} key={index}>
                                 <>
-                                    <div className="card-body">
+                                    <div className="continer">
                                         <h5 className="card-id" style={{ textAlign: "center", color: "teal", fontSize: 15 }}>
                                             Id: {el.id}</h5>
                                         <h6 className="card-title" style={{ textAlign: "center", color: "blue", fontSize: 12 }}>
