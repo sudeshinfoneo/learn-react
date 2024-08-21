@@ -12,26 +12,33 @@ const Product = (props) => {
 
     return (
         <>
-            <div className="container">
-                <div className='row' >
+            <div class="container mt-4">
+                <div class="row g-4">
                     {
                         product && product.map((el, index) => (
-                            <>
-                                <div className='container mt-2' key={index}>
-                                    <h4>id: {el.id}</h4>
-                                    <h5>title: {el.title}</h5>
-                                    <h6>price: {el.price}</h6>
-                                    <p>description: {el.description}</p>
-                                    <p>category: {el.category}</p>
-                                    <p>image: <img src={el.image} alt={el.title} className="float-end" width="120" height="120" /></p>
-                                    <p>rate: {el.rating?.rate || 'N/A'} </p>
-                                    <p>count: {el.rating?.count || 'N/A'} </p>
-                                </div>
-                            </>
+                            <div className="card-body" style={{ width: 250 }} key={index}>
+                                <>
+                                    <img src={el.image} alt={el.title} className="mx-auto d-block" style={{ width: 200, height: 200 }} />
+                                    <div className="card-body">
+                                        <h5 className="card-id" style={{ textAlign: "center", color: "teal", fontSize: 15 }}>Id: {el.id}</h5>
+                                        <h6 className="card-title" style={{ textAlign: "justify", color: "blue", fontSize: 12 }}>Title: {el.title}</h6>
+                                        <p className="card-description" style={{ textAlign: "justify", color: "black", fontSize: 10 }}><b>Description:</b> {el.description}</p>
+                                        <p className="card-category" style={{ textAlign: "justify", color: "black", fontSize: 11 }}><b>Category:</b> {el.category}</p>
+                                        <div className="card-rating">
+                                            <p className="card-rate" style={{ textAlign: "justify", color: "black", fontSize: 10 }}><b>Rating:</b> {el.rating?.rate || 'N/A'} </p>
+                                            <p className="care-count" style={{ textAlign: "justify", color: "black", fontSize: 10 }}><b>Count</b> {el.rating?.count || 'N/A'} </p>
+                                        </div>
+                                        <h6 className="card-price" style={{ textAlign: "justify", color: "black", fontSize: 11 }}>Price: {el.price}</h6>
+                                        <a href="#" class="btn btn-primary" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '5vh' }}><b>Buy Now</b></a>
+                                    </div>
+                                </>
+                            </div>
                         ))
                     }
                 </div>
+
             </div>
+
         </>
     )
 }

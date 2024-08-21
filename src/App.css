@@ -36,3 +36,6 @@
     transform: rotate(360deg);
   }
 }
+        .card {
+            height: 100%; /* Ensures all cards are the same height */
+        }
