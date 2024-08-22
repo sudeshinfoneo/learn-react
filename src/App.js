@@ -14,7 +14,6 @@ import Filter from './components/Filter';
 import Counter from './components/Counter'
 import Product from './components/Product';
 import Category from './components/Category'
-import Update from './components/Update';
 
 function App() {
   return (
@@ -33,7 +32,6 @@ function App() {
           <Route path='/counter' element= {<Counter />} />
           <Route path='/product' element={<Product />} />
           <Route path='/category' element={<Category />} />
-          <Route path='/update' element={<Update />} />
         </Routes>
       </main>
       <Footer />

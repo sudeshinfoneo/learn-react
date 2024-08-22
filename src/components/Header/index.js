@@ -42,9 +42,6 @@ const Header = (props) => {
                             <li className="nav-item">
                                 <Link to="category" className="nav-link">Category</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link to='/update' className="nav-link">Update</Link>
-                            </li>
                         </ul>
                         <div className="navbar-nav ml-auto">
                             <li className="nav-item">
