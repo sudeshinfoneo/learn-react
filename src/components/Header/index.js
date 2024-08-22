@@ -31,7 +31,7 @@ const Header = (props) => {
                                 <Link to="/album" className="nav-link">Album</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/practice" className="nav-link">Practice</Link>
+                                <Link to="/filter" className="nav-link">Filter</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/counter" className="nav-link">Counter</Link>

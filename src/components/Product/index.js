@@ -13,7 +13,7 @@ const Product = (props) => {
 
     return (
         <>
-              <div className="container mt-4">
+            <div className="container mt-4">
                 <div className="row g-4">
                     {
                         product && product.map((el, index) => (
@@ -30,19 +30,15 @@ const Product = (props) => {
                                             <p className="card-count" style={{ fontSize: 10 }}><b>Count</b> {el.rating?.count || 'N/A'} </p>
                                         </div>
                                         <h6 className="card-price" style={{ fontSize: 11 }}>Price: {el.price}</h6>
-                                        <a href="#" className="btn btn-primary d-flex justify-content-center align-items-center" style={{height: '5vh' }}><b>Buy Now</b></a>
+                                        <a href="#" className="btn btn-primary d-flex justify-content-center align-items-center" style={{ height: '5vh' }}><b>Buy Now</b></a>
                                     </div>
                                 </>
-                                
+
                             </div>
                         ))
                     }
                 </div>
             </div>
-
-  
-
-
         </>
     )
 }

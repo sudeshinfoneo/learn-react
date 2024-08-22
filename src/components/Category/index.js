@@ -24,7 +24,7 @@ const Category = (props) => {
                                     </li>
                                 </>
                             ))
-                            }
+                        }
                     </ul>
                 </div>
             </nav>
