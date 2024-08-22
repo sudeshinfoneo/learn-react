@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+
 const Product = (props) => {
 
     const [product, setProduct] = useState([])
@@ -12,7 +13,7 @@ const Product = (props) => {
 
     return (
         <>
-            <div className="container mt-4">
+              <div className="container mt-4">
                 <div className="row g-4">
                     {
                         product && product.map((el, index) => (
@@ -32,12 +33,15 @@ const Product = (props) => {
                                         <a href="#" class="btn btn-primary" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '5vh' }}><b>Buy Now</b></a>
                                     </div>
                                 </>
+                                
                             </div>
                         ))
                     }
                 </div>
-
             </div>
+
+  
+
 
         </>
     )
