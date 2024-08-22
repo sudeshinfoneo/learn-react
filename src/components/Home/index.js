@@ -19,9 +19,7 @@ const Home = (props) => {
 
     return (
         <>
-            <header className="page-header">
-
-            </header>
+            <header className="page-header"></header>
             <div className="container">
                 <section>
                     <div className="feature-posts">

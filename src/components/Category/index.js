@@ -23,7 +23,8 @@ const Category = (props) => {
                                         <a className="nav-link" href="#">{el}</a>
                                     </li>
                                 </>
-                            ))}
+                            ))
+                            }
                     </ul>
                 </div>
             </nav>
