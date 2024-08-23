@@ -11,7 +11,6 @@ import Counter from "./components/Counter";
 import Product from "./components/Product";
 import Category from "./components/Category";
 
-
 const Router = createBrowserRouter([
     {
         path: '/',
@@ -57,6 +56,7 @@ const Router = createBrowserRouter([
         path: '/category',
         element: <Category />
     },
+
 
 ])
 

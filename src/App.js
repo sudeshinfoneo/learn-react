@@ -13,7 +13,7 @@ import './assets/css/joeblog.css';
 import Filter from './components/Filter';
 import Counter from './components/Counter'
 import Product from './components/Product';
-import Category from './components/Category'
+
 
 function App() {
   return (
@@ -31,7 +31,6 @@ function App() {
           <Route path='/filter' element={<Filter />} />
           <Route path='/counter' element= {<Counter />} />
           <Route path='/product' element={<Product />} />
-          <Route path='/category' element={<Category />} />
         </Routes>
       </main>
       <Footer />
