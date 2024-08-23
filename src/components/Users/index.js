@@ -13,10 +13,10 @@ const Users = (props) => {
     // create useEffect hook to get data and list
     return (
         <>
-            <table class="table">
+            <table className="table table-bordered text-center">
                 <thead>
                     <tr>
-                        <th scope="col">SNo</th>
+                        <th scope="col">S No</th>
                         <th scope="col">Name</th>
                         <th scope="col">Username</th>
                         <th scope="col">Email</th>
@@ -27,12 +27,12 @@ const Users = (props) => {
                     {
                         users && users.map((el, index) => (
                          <>
-                                <tr key={index}> 
-                                    <th scope="row">1</th>
-                                    <td>John { el.name }</td>
-                                    <td>Doe { el.username }</td>
-                                    <td>john@example.com { el.email }</td>
-                                    <td>12345 { el.address.city }</td>
+                                <tr key={index} > 
+                                    <th scope="row">{index+1}</th>
+                                    <td>{ el.name }</td>
+                                    <td>{ el.username }</td>
+                                    <td>{ el.email }</td>
+                                    <td>{ el.address.city }</td>
                                 </tr>
 
                               

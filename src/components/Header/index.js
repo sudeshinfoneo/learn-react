@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
+
     return (
         <>
             <nav className="navbar custom-navbar navbar-expand-md navbar-light bg-primary sticky-top">
@@ -25,17 +27,20 @@ const Header = (props) => {
                             <li className="nav-item">
                                 <Link to="/todos" className="nav-link">Todos</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link to="/photo" className="nav-link">Photo</Link>
-                            </li>
                             <li className="=nav-item">
                                 <Link to="/album" className="nav-link">Album</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/practice" className="nav-link">Practice</Link>
+                                <Link to="/filter" className="nav-link">Filter</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/counter" className="nav-link">Counter</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="product" className="nav-link">Product</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="category" className="nav-link">Category</Link>
                             </li>
                         </ul>
                         <div className="navbar-nav ml-auto">

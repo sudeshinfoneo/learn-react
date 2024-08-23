@@ -6,9 +6,11 @@ import Sidebar from "./components/Sidebar";
 import Users from "./components/Users";
 import Todos from "./components/Todos";
 import Album from "./components/Album";
-import Photo from "./components/Photo";
-import Practice from "./components/Practice";
+import Filter from "./components/Filter";
 import Counter from "./components/Counter";
+import Product from "./components/Product";
+import Category from "./components/Category";
+
 
 const Router = createBrowserRouter([
     {
@@ -40,17 +42,21 @@ const Router = createBrowserRouter([
         element: <Album />
     },
     {
-        path: '/photo',
-        element: <Photo />
+        path: '/filter',
+        element: <Filter />
     },
     {
-        path: '/practice',
-        element: <Practice />
-    },
-    {
-        path: '/call',
+        path: '/counter',
         element: <Counter />
-    }
+    },
+    {
+        path: '/product',
+        element: <Product />
+    },
+    {
+        path: '/category',
+        element: <Category />
+    },
 
 ])
 

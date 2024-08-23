@@ -11,18 +11,15 @@ const Home = (props) => {
     const [post, setPost] = useState([])
 
     useEffect(() => {
-       fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json()).then(data => {
-        setPost(data)
-       })
-    },[])    
-    
-  
+        fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json()).then(data => {
+            setPost(data)
+        })
+    }, [])
+
+
     return (
         <>
-
-            <header className="page-header">
-
-            </header>
+            <header className="page-header"></header>
             <div className="container">
                 <section>
                     <div className="feature-posts">
@@ -73,13 +70,7 @@ const Home = (props) => {
                         </div>
                         <hr />
                         <PostCard data={post} />
-                    
-                
-                        
-                        
-                        
                     </div>
-
                 </div>
             </div>
         </>

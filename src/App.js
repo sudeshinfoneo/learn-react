@@ -9,11 +9,11 @@ import Sidebar from './components/Sidebar/index';
 import Users from './components/Users';
 import Todos from './components/Todos';
 import Album from './components/Album';
-import Photo from './components/Photo';
 import './assets/css/joeblog.css';
-import Practice from './components/Practice';
+import Filter from './components/Filter';
 import Counter from './components/Counter'
-
+import Product from './components/Product';
+import Category from './components/Category'
 
 function App() {
   return (
@@ -28,9 +28,10 @@ function App() {
           <Route path='/users' element={<Users />} />
           <Route path='/todos' element={<Todos />} />
           <Route path='/album' element={<Album />} />
-          <Route path='/photo' element={<Photo />} />
-          <Route path='/practice' element={<Practice />} />
+          <Route path='/filter' element={<Filter />} />
           <Route path='/counter' element= {<Counter />} />
+          <Route path='/product' element={<Product />} />
+          <Route path='/category' element={<Category />} />
         </Routes>
       </main>
       <Footer />
