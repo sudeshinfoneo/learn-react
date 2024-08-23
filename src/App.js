@@ -13,7 +13,8 @@ import './assets/css/joeblog.css';
 import Filter from './components/Filter';
 import Counter from './components/Counter'
 import Product from './components/Product';
-import Category from './components/Category'
+import Category from './components/Category';
+import AdminProduct from './components/Admin/Product';
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
           <Route path='/counter' element= {<Counter />} />
           <Route path='/product' element={<Product />} />
           <Route path='/category' element={<Category />} />
+          <Route path='/admin/product' element={<AdminProduct />} />
+          {/* <Route path="*" element={<h1>404 Not Found</h1>} /> */}
         </Routes>
       </main>
       <Footer />
