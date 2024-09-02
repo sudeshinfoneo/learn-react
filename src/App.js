@@ -34,7 +34,9 @@ function App() {
           <Route path='/product' element={<Product />} />
           <Route path='/category' element={<Category />} />
           <Route path='/admin/product' element={<AdminProduct />} />
+          
           {/* <Route path="*" element={<h1>404 Not Found</h1>} /> */}
+
         </Routes>
       </main>
       <Footer />

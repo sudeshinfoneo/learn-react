@@ -56,7 +56,7 @@ const Product = (props) => {
                             <div className="card border m-1" style={{ width: 275 }} key={index}>
                                 <>
                                     <div className="card-body text center">
-                                        <h5 className="card-id text-center" id="title" name="title" value={newProduct.title} onChange={handleChange} style={{ fontSize: 15 }}><b>Id:</b> {el.id}</h5>
+                                        <h5 className="card-id text-center" style={{ fontSize: 15 }}><b>Id:</b> {el.id}</h5>
                                         <h6 className="card-title text-center" style={{ fontSize: 12 }}><b>Title:</b> {el.title}</h6>
                                         <img src={el.image} alt={el.title} className="mx-auto d-block" style={{ width: 200, height: 200 }} />
                                         <p className="card-description" style={{ fontSize: 10 }}><b>Description:</b> {el.description}</p>
@@ -80,7 +80,7 @@ const Product = (props) => {
                 <div className="row g-4">
                     <div className="card border m-1" style={{ width: 275 }}>
                         <div className="card-body text-center">
-                            <h5 className="card-id text-center" style={{ fontSize: 15 }}><b>Id: </b> {newProduct.Id}</h5>
+                            <h5 className="card-id text-center" id="title" name="title" value={newProduct.title} onChange={handleChange} style={{ fontSize: 15 }}><b>Id: </b> {newProduct.Id}</h5>
                             <h6 className="card-title text-center" style={{ fontSize: 12 }}><b>Title:</b> {newProduct.title}</h6>
                             <img src={Avatar} alt={newProduct.title} className="mx-auto d-block" style={{ width: 200, height: 200 }} />
                             <p className="card-description" style={{ textAlign: "justify", fontSize: 10 }}><b>Description:</b> {newProduct.description}</p>
