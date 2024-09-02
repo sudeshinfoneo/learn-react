@@ -21,6 +21,8 @@ const AdminProduct = (props) => {
                 <div className="row">
                     <div className="col-md-12">
                         <h1>Admin Product</h1>
+                        <button className="btn btn-warning" onClick={(e) => setShow(true)}>Create Product</button>
+                        <button className="btn btn-danger">Delete Product</button>                        
                         <div className="table-responsive">
                             <table className="table table-secondary">
                                 <thead>
@@ -28,7 +30,6 @@ const AdminProduct = (props) => {
                                         <th scope="col">ID</th>
                                         <th scope="col">Title</th>
                                         <th scope="col">Image</th>
-                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -37,11 +38,7 @@ const AdminProduct = (props) => {
                                             <tr key={item.id}>
                                                 <td>{item.id}</td>
                                                 <td>{item.title}</td>
-                                                <td><img src={item.image} alt="" width="50" /></td>
-                                                <td> 
-                                                    <button className="btn btn-danger">Delete</button>
-                                                    <button className="btn btn-warning" onClick={(e) => setShow(true)}>Create</button>
-                                                    </td>
+                                                <td><img src={item.image} alt="" width={50} height={50}/></td>
                                             </tr>
                                         ))
                                     }
