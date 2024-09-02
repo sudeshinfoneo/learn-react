@@ -37,10 +37,13 @@ const Header = (props) => {
                                 <Link to="/counter" className="nav-link">Counter</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="product" className="nav-link">Product</Link>
+                                <Link to="/product" className="nav-link">Product</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="category" className="nav-link">Category</Link>
+                                <Link to="/category" className="nav-link">Category</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/admin/product" className="nav-link">AdminProduct</Link>
                             </li>
                         </ul>
                         <div className="navbar-nav ml-auto">
