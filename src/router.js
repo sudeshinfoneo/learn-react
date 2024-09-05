@@ -60,8 +60,7 @@ const Router = createBrowserRouter([
     {
         path: '/admin/product',
         element: <AdminProduct />
-    }
-
+    },
 
 ])
 
