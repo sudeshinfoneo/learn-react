@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { json } from "react-router-dom";
 
 const EditModal = ({ showEdit, handleClose, product, onUpdateProduct }) => {
     const [editedProduct, setEditedProduct] = useState(product || {title: '' });
@@ -17,7 +16,7 @@ const EditModal = ({ showEdit, handleClose, product, onUpdateProduct }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('https://fakestoreapi.com/products/${product.id}', {
+        fetch(`https://fakestoreapi.com/products/${product.id}`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json',

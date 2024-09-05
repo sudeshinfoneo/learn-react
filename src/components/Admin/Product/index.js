@@ -25,6 +25,12 @@ const AdminProduct = (props) => {
         setShowEdit(true);
     }
     
+    const handleUpdateProduct = (updatedProduct) => {
+        setProduct((prevProducts) =>
+            prevProducts.map((p) => (p.id === updatedProduct.id ? updatedProduct : p))
+        );
+    }
+
 
 
     useEffect(() => {
@@ -63,7 +69,7 @@ const AdminProduct = (props) => {
                                                 <td><img src={item.image} alt="" width="50" /></td>
                                                 <td>
                                                     <button className="btn btn-danger" onClick={() => handleShowDelete(item.id)}>Delete</button>
-                                                    <button className="btn btn-warning" onClick={() => handleShowEdit(item.id)}>Edit</button>
+                                                    <button className="btn btn-warning" onClick={() => handleShowEdit(item)}>Edit</button>
                                                 </td>
                                             </tr>
                                         ))
@@ -76,7 +82,7 @@ const AdminProduct = (props) => {
             </div>
             <AddModal show={showAdd} handleClose={handleCloseAdd} />
             <DeleteModal showDelete={showDelete} handleClose={handleCloseDelete} productId={productId} setProductId={setProductId}/>
-            <EditModal showEdit={showEdit} handleClose={handleCloseEdit} product={currentProduct} setProduct={setCurrentProduct}/>
+            <EditModal showEdit={showEdit} handleClose={handleCloseEdit} product={currentProduct} onUpdateProduct={handleUpdateProduct}/>
 
         </>
     );
