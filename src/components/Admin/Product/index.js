@@ -30,8 +30,7 @@ const AdminProduct = (props) => {
             prevProducts.map((p) => (p.id === updatedProduct.id ? updatedProduct : p))
         );
     }
-
-
+    
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products?limit=8&sort=desc')
@@ -54,9 +53,9 @@ const AdminProduct = (props) => {
                             <table className="table table-secondary">
                                 <thead>
                                     <tr>
+                                    <th scope="col">Image</th>
                                         <th scope="col">ID</th>
-                                        <th scope="col">Title</th>
-                                        <th scope="col">Image</th>
+                                        <th scope="col">Title</th>                                        
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
@@ -64,9 +63,10 @@ const AdminProduct = (props) => {
                                     {
                                         product.map((item) => (
                                             <tr key={item.id}>
+                                                <td><img src={item.image} alt="" width="50" /></td>
                                                 <td>{item.id}</td>
                                                 <td>{item.title}</td>
-                                                <td><img src={item.image} alt="" width="50" /></td>
+                                                
                                                 <td>
                                                     <button className="btn btn-danger" onClick={() => handleShowDelete(item.id)}>Delete</button>
                                                     <button className="btn btn-warning" onClick={() => handleShowEdit(item)}>Edit</button>

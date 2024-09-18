@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 const Todos = (props) => {
 
     const [todos, setTodos] = useState([])
-
+    
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/todos').then(res => res.json()).then(data => {
             setTodos(data)
         })
     }, [])
+   
 
     return (
         <>
@@ -29,3 +29,4 @@ const Todos = (props) => {
     )
 }
 export default Todos;
+
