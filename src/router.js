@@ -10,6 +10,7 @@ import Filter from "./components/Filter";
 import Counter from "./components/Counter";
 import Product from "./components/Product";
 import Category from "./components/Category";
+import AdminProduct from "./components/Admin/Product";
 
 const Router = createBrowserRouter([
     {
@@ -56,7 +57,10 @@ const Router = createBrowserRouter([
         path: '/category',
         element: <Category />
     },
-
+    {
+        path: '/admin/product',
+        element: <AdminProduct />
+    },
 
 ])
 
