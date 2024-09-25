@@ -32,7 +32,7 @@ const AddModal = (props) => {
         <>
             <Modal show={show} onHide={handleClose}>
 
-                <Modal.Dialog >
+                <Modal.Dialog>
                     <Modal.Header closeButton>
                         <Modal.Title>Add Product</Modal.Title>
                     </Modal.Header>
@@ -50,7 +50,6 @@ const AddModal = (props) => {
                                 <label htmlFor="exampleInputPassword1" className="form-label">Product Description</label>
                                 <textarea className="form-control" onChange={handleInputChange} name="description" id="exampleInputPassword1"></textarea>
                             </div>
-
                             <div className="mb-3">
                                 <label htmlFor="productImage" className="form-label">Product Image</label>
                                 <div className="border p-1 rounded text-center">
