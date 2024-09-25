@@ -27,7 +27,7 @@ const Filter = () => {
 
   return (
     <div>
-      <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search items..."/>
+      <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search items..." />
       <ItemList items={items} searchTerm={searchTerm} />
     </div>
   );

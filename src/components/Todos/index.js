@@ -56,6 +56,7 @@ const Todos = (props) => {
         { id: 3, title: 'Final List', completed: true }
       ];
       setTodos(defaultTodos);
+      
       localStorage.setItem('todos', JSON.stringify(defaultTodos));
     }
   }, []);
