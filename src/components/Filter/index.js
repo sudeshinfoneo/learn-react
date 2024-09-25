@@ -1,6 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 
 const ItemList = ({ items, searchTerm }) => {
+  const [user, setUser] = useState({})
 
   const filteredItems = useMemo(() => {
     console.log('Filtering items...');
@@ -9,9 +10,20 @@ const ItemList = ({ items, searchTerm }) => {
     );
   }, [items, searchTerm]); 
 
+  const userLocal  = localStorage.getItem('name')
+
+  useEffect(() => {
+    if(userLocal) {
+      setUser(JSON.parse(userLocal));
+    }    
+  },[userLocal])
+
+
   return (
     <div>
       <h2>Item List</h2>
+      <p>user: {user?.name}</p>
+      <p>user: {user?.role}</p>
       <ul>
         {filteredItems.map((item, index) => (
           <li key={index}>{item}</li>
@@ -27,6 +39,7 @@ const Filter = () => {
 
   return (
     <div>
+      <p>name: </p>
       <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search items..."/>
       <ItemList items={items} searchTerm={searchTerm} />
     </div>

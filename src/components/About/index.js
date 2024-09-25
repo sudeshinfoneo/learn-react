@@ -10,8 +10,19 @@ import Person3 from '../../assets/imgs/person-3.jpg'
 import Person4 from '../../assets/imgs/person-4.jpg'
 import Person5 from '../../assets/imgs/person-5.jpg'
 import Person6 from '../../assets/imgs/person-6.jpg'
+import { useEffect, useState } from "react";
 
 const About = (props) => {
+  const [user, setUser] = useState({})
+  useEffect(() => {
+    setUser({
+      ...user,
+      name: "Mamta",
+      role: 'Admin'
+    })
+    localStorage.setItem('name', JSON.stringify(user))
+  },[user])
+
   return (
     <>
       <main id="main" />
