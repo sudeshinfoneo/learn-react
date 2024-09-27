@@ -39,12 +39,10 @@ const Filter = () => {
 
   return (
     <div>
-<<<<<<< HEAD
+
       <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search items..." />
-=======
       <p>name: </p>
       <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search items..."/>
->>>>>>> 81b384965fdcd8d833b94aa6b480da94a50a0f8b
       <ItemList items={items} searchTerm={searchTerm} />
     </div>
   );

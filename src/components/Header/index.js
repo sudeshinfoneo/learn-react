@@ -17,10 +17,10 @@ const Header = (props) => {
                                 <Link to="/" className="nav-link">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/about" className="nav-link">About us</Link>
+                                <Link to="/about" className="nav-link" style={{ whiteSpace: 'nowrap' }}>About us</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/contact" className="nav-link">Contact us</Link>
+                                <Link to="/contact" className="nav-link">Contact</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/users" className="nav-link">Users</Link>
@@ -45,13 +45,6 @@ const Header = (props) => {
                             </li>
                             <li className="nav-item">
                                 <Link to="/admin/product" className="nav-link">AdminProduct</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/admin/counter" className="nav-link">AdminCounter</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/conditions" className="nav-link">Conditions</Link>
-
                             </li>
                         </ul>
                         <div className="navbar-nav ml-auto">

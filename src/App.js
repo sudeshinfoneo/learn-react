@@ -15,8 +15,6 @@ import Counter from './components/Counter'
 import Product from './components/Product';
 import Category from './components/Category';
 import AdminProduct from './components/Admin/Product';
-import AdminCounter from './components/Admin/Counter';
-import Condition from './components/Conditions'
 
 function App() {
   return (
@@ -35,9 +33,7 @@ function App() {
           <Route path='/counter' element= {<Counter />} />
           <Route path='/product' element={<Product />} />
           <Route path='/category' element={<Category />} />
-          <Route path='/conditions' element={<Condition />}/>
-          <Route path='/admin/product' element={<AdminProduct />} />  
-          <Route path='/admin/counter' element={<AdminCounter />} />       
+          <Route path='/admin/product' element={<AdminProduct />} />       
 
         </Routes>
       </main>
