@@ -3,7 +3,7 @@ import { addQuery, resloveQuery } from "../../store/features/query/querySlice";
 import { useDispatch, useSelector } from "react-redux";
 import { v4 as uuidv4 } from 'uuid'
 
-const Contact = (props) => {
+const Contact = () => {
     const query = useSelector((store) => store.query.query);
     const dispatch = useDispatch();
 
@@ -15,7 +15,7 @@ const Contact = (props) => {
         message: '',
     })
 
-    const [errors, setErrors] =useState({});
+    const [errors, setErrors] = useState({});
     const [showModal, setShowModal] = useState(false);
 
     const handleChange = (e) => {
@@ -38,16 +38,16 @@ const Contact = (props) => {
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
-        }
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(validateForm()) {
+        if (validateForm()) {
             console.log('formData:', formData);
             dispatch(addQuery({
                 ...formData,
                 id: uuidv4()
-            })); 
+            }));
             setFormData({
                 name: '',
                 mobile: '',
@@ -56,7 +56,7 @@ const Contact = (props) => {
                 message: ''
             });
             setShowModal(false);
-            }          
+        }
     };
 
     const handleCancel = () => {
@@ -68,8 +68,7 @@ const Contact = (props) => {
             message: ''
         });
         setShowModal(false)
-    }
-
+    };
 
     return (
         <>
@@ -90,7 +89,6 @@ const Contact = (props) => {
                                     <th scope="col">Email</th>
                                     <th scope="col">Subject</th>
                                     <th scope="col">Message</th>
-                                 
                                 </tr>
                             </thead>
                             <tbody>
@@ -111,7 +109,7 @@ const Contact = (props) => {
                     </div>
                 </div>
 
-               <div className={`modal fade ${showModal ? 'show' : ''}`} style={{ display: showModal ? 'block' : 'none' }} aria-labelledby="modalLabel" aria-hidden="true">
+                <div className={`modal fade ${showModal ? 'show' : ''}`} style={{ display: showModal ? 'block' : 'none' }} aria-labelledby="modalLabel" aria-hidden="true">
                     <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-header">
@@ -129,18 +127,18 @@ const Contact = (props) => {
                                             name="name"
                                             value={formData.name}
                                             onChange={handleChange}
-                                            placeholder="Enter your First Name" />                                        
+                                            placeholder="Enter your First Name" />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="mobile">Mobile No.</label>
                                         <input
-                                            type="text" 
+                                            type="text"
                                             className={`form-control form-control-sm ${errors.mobile ? 'is-invalid' : ''}`}
                                             id="mobile"
                                             name="mobile"
                                             value={formData.mobile}
                                             onChange={handleChange}
-                                            placeholder="Enter your Mobile No." />                                        
+                                            placeholder="Enter your Mobile No." />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="email">Email</label>
@@ -151,7 +149,7 @@ const Contact = (props) => {
                                             name="email"
                                             value={formData.email}
                                             onChange={handleChange}
-                                            placeholder="Enter your Email" />                                        
+                                            placeholder="Enter your Email" />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="subject">Subject</label>
@@ -162,7 +160,7 @@ const Contact = (props) => {
                                             name="subject"
                                             value={formData.subject}
                                             onChange={handleChange}
-                                            placeholder="Enter the Subject" />                                        
+                                            placeholder="Enter the Subject" />
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="message">Message</label>
@@ -173,7 +171,7 @@ const Contact = (props) => {
                                             value={formData.message}
                                             onChange={handleChange}
                                             rows="2"
-                                            placeholder="Type your Message" />                                        
+                                            placeholder="Type your Message" />
                                     </div>
                                     <div className="modal-footer">
                                         <button type="submit" className="btn btn-primary">Submit</button>
@@ -185,10 +183,6 @@ const Contact = (props) => {
                     </div>
                 </div>
             </div>
-
-
-
-
         </>
     )
 }
