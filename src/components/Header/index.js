@@ -17,10 +17,10 @@ const Header = (props) => {
                                 <Link to="/" className="nav-link">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/about" className="nav-link">About us</Link>
+                                <Link to="/about" className="nav-link" style={{ whiteSpace: 'nowrap' }}>About us</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/contact" className="nav-link">Contact us</Link>
+                                <Link to="/contact" className="nav-link">Contact</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/users" className="nav-link">Users</Link>

@@ -33,8 +33,7 @@ function App() {
           <Route path='/counter' element= {<Counter />} />
           <Route path='/product' element={<Product />} />
           <Route path='/category' element={<Category />} />
-          <Route path='/admin/product' element={<AdminProduct />} />      
-   
+          <Route path='/admin/product' element={<AdminProduct />} />       
 
         </Routes>
       </main>

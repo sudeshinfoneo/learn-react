@@ -1,73 +1,195 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { addQuery, resloveQuery } from "../../store/features/query/querySlice";
+import { useDispatch, useSelector } from "react-redux";
+import { v4 as uuidv4 } from 'uuid'
 
 const Contact = (props) => {
+    const query = useSelector((store) => store.query.query);
+    const dispatch = useDispatch();
+
+    const [formData, setFormData] = useState({
+        name: '',
+        mobile: '',
+        email: '',
+        subject: '',
+        message: '',
+    })
+
+    const [errors, setErrors] =useState({});
+    const [showModal, setShowModal] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const validateForm = () => {
+        const newErrors = {};
+        if (!formData.name.trim()) newErrors.name = "Name is required.";
+        if (!formData.mobile.trim()) newErrors.mobile = "Mobile number is required.";
+        else if (!/^\d{10}$/.test(formData.mobile)) newErrors.mobile = "Invalid mobile number.";
+        if (!formData.email.trim()) newErrors.email = "Email is required.";
+        else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Email is invalid.";
+        if (!formData.subject.trim()) newErrors.subject = "Subject is required.";
+        if (!formData.message.trim()) newErrors.message = "Message is required.";
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+        }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if(validateForm()) {
+            console.log('formData:', formData);
+            dispatch(addQuery({
+                ...formData,
+                id: uuidv4()
+            })); 
+            setFormData({
+                name: '',
+                mobile: '',
+                email: '',
+                subject: '',
+                message: ''
+            });
+            setShowModal(false);
+            }          
+    };
+
+    const handleCancel = () => {
+        setFormData({
+            name: '',
+            mobile: '',
+            email: '',
+            subject: '',
+            message: ''
+        });
+        setShowModal(false)
+    }
+
 
     return (
         <>
-            <section id="contact" class="contact section">
-
-                <div className="container" data-aos="fade">
-                    <div className="row gy-5 gx-lg-5">
-                        <div className="col-lg-4">
-                            <div className="info">
-                                <h3>Get in touch</h3>
-                                <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p>
-
-                                <div className="info-item d-flex">
-                                    <i className="bi bi-geo-alt flex-shrink-0"></i>
-                                    <div>
-                                        <h4>Location:</h4>
-                                        <p>A108 Adam Street, New York, NY 535022</p>
-                                    </div>
-                                </div>
-                                <div className="info-item d-flex">
-                                    <i className="bi bi-envelope flex-shrink-0"></i>
-                                    <div>
-                                        <h4>Email:</h4>
-                                        <p>info@example.com</p>
-                                    </div>
-                                </div>
-                                <div className="info-item d-flex">
-                                    <i className="bi bi-phone flex-shrink-0"></i>
-                                    <div>
-                                        <h4>Call:</h4>
-                                        <p>+1 5589 55488 55</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-8">
-                            <form action="forms/contact.php" method="post" role="form" className="php-email-form">
-                                <div className="row">
-                                    <div className="col-md-6 form-group">
-                                        <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required="" />
-                                    </div>
-                                    <div className="col-md-6 form-group mt-3 mt-md-0">
-                                        <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required="" />
-                                    </div>
-                                </div>
-                                <div className="form-group mt-3">
-                                    <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required="" />
-                                </div>
-                                <div className="form-group mt-3">
-                                    <textarea className="form-control" name="message" placeholder="Message" required=""></textarea>
-                                </div>
-
-                                <div className="text-center"><button type="submit">Send Message</button></div>
-
-                            </form>
-                        </div>
+            <div className="container mt-4">
+                <div className="d-flex justify-content-between align-items-center mt-4">
+                    <h3 className="text-center font-weight-bold">Query List of User</h3>
+                    <button className="btn btn-success btn-sm" onClick={() => setShowModal(true)}>Add Your Query</button>
+                </div>
+                <hr className="mt-2" />
+                <div className="table-responsive">
+                    <div className="table text-center">
+                        <table className="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">S.No.</th>
+                                    <th scope="col" style={{ whiteSpace: 'nowrap' }}>Full Name</th>
+                                    <th scope="col" style={{ whiteSpace: 'nowrap' }}>Mobile No.</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Message</th>
+                                 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    query && query.map((el, index) => (
+                                        <tr key={el.id}>
+                                            <th scope="row">{index + 1}</th>
+                                            <td>{el.name}</td>
+                                            <td>{el.mobile}</td>
+                                            <td>{el.email}</td>
+                                            <td>{el.subject}</td>
+                                            <td>{el.message}</td>
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
+               <div className={`modal fade ${showModal ? 'show' : ''}`} style={{ display: showModal ? 'block' : 'none' }} aria-labelledby="modalLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title" id="modalLabel">Add New Query</h5>
+                                <button type="button" className="btn-close" onClick={() => setShowModal(false)} aria-label="Close"></button>
+                            </div>
+                            <div className="modal-body">
+                                <form onSubmit={handleSubmit}>
+                                    <div className="form-group">
+                                        <label htmlFor="name">First Name</label>
+                                        <input
+                                            type="text"
+                                            className={`form-control form-control-sm ${errors.name ? 'is-invalid' : ''}`}
+                                            id="name"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            placeholder="Enter your First Name" />                                        
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="mobile">Mobile No.</label>
+                                        <input
+                                            type="text" 
+                                            className={`form-control form-control-sm ${errors.mobile ? 'is-invalid' : ''}`}
+                                            id="mobile"
+                                            name="mobile"
+                                            value={formData.mobile}
+                                            onChange={handleChange}
+                                            placeholder="Enter your Mobile No." />                                        
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="email">Email</label>
+                                        <input
+                                            type="email"
+                                            className={`form-control form-control-sm ${errors.email ? 'is-invalid' : ''}`}
+                                            id="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            placeholder="Enter your Email" />                                        
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="subject">Subject</label>
+                                        <input
+                                            type="text"
+                                            className={`form-control form-control-sm ${errors.subject ? 'is-invalid' : ''}`}
+                                            id="subject"
+                                            name="subject"
+                                            value={formData.subject}
+                                            onChange={handleChange}
+                                            placeholder="Enter the Subject" />                                        
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="message">Message</label>
+                                        <textarea
+                                            className={`form-control ${errors.message ? 'is-invalid' : ''}`}
+                                            id="message"
+                                            name="message"
+                                            value={formData.message}
+                                            onChange={handleChange}
+                                            rows="2"
+                                            placeholder="Type your Message" />                                        
+                                    </div>
+                                    <div className="modal-footer">
+                                        <button type="submit" className="btn btn-primary">Submit</button>
+                                        <button type="button" className="btn btn-secondary" onClick={handleCancel}>Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            </section>
+
 
 
         </>
     )
 }
-
 export default Contact;
