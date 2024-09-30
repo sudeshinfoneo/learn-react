@@ -15,6 +15,7 @@ import Counter from './components/Counter'
 import Product from './components/Product';
 import Category from './components/Category';
 import AdminProduct from './components/Admin/Product';
+import Practice from './components/Practice';
 
 function App() {
   return (
@@ -33,7 +34,9 @@ function App() {
           <Route path='/counter' element= {<Counter />} />
           <Route path='/product' element={<Product />} />
           <Route path='/category' element={<Category />} />
-          <Route path='/admin/product' element={<AdminProduct />} />         
+          <Route path='/admin/product' element={<AdminProduct />} /> 
+          <Route path='/practice' element={<Practice />} />
+
         </Routes>   
       </main>
       <Footer />

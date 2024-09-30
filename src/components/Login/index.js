@@ -50,13 +50,13 @@ const Login = () => {
     return (
         <>
             <div>
-                <button type="button" className="btn btn-secondary btn-sm border-dark" onClick={() => setShowModal(true)}>Login</button>
+                <button type="button" className="btn btn-secondary btn-sm btn btn-outline-dark" onClick={() => setShowModal(true)}>Login</button>
             </div>
             <div className={`modal fade ${showModal ? 'show' : ''}`} style={{ display: showModal ? 'block' : 'none' }} aria-labelledby="modalLabel" aria-hidden={!showModal}>
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="modalLabel">Login</h5>
+                            <h5 className="modal-title" id="modalLabel">Login Form</h5>
                             <button type="button" className="btn-close" onClick={handleCancel} aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
