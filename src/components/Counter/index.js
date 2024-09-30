@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "../../store/features/counter/counterSlice";
 import { addTodo, editTodo, removeTodo } from "../../store/features/todo/todoSlice";
 import { v4 as uuidv4 } from 'uuid';
+import { validateJson } from 'infoneo-input-validator';
 
 const Counter = () => {
   const [formData, setFormData] = useState({});
@@ -22,9 +23,9 @@ const Counter = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    if(!formData.fname) newErrors.fname = 'First Name is Required';
-    if(!formData.lname) newErrors.lname = 'Last Name is Required';
-    if(!formData.handle) newErrors.handle = 'Handle is Required';
+    if (!formData.fname) newErrors.fname = 'First Name is Required';
+    if (!formData.lname) newErrors.lname = 'Last Name is Required';
+    if (!formData.handle) newErrors.handle = 'Handle is Required';
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   }
@@ -39,23 +40,45 @@ const Counter = () => {
 
   const handleAddorUpdate = (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      if(isEditing) {
-        dispatch(editTodo({
-          id: editId,
-          data: {...formData}
-        }));
-        setIsEditing(false);
-        setEditId(null)
-      } else {
-        dispatch(addTodo({
-          ...formData,
-          id: uuidv4()
-        }));
-      }
-        setFormData({});
-        setErrors({});
-      }
+
+    const rule = {
+      fname: [
+        { type: 'required', message: 'First name is required' },
+        { type: 'minLength', value: 3, message: 'First name must be at least 3 characters' },
+        { type: 'maxLength', value: 10, message: 'First name cannot exceed 10 characters' },
+        { type: 'pattern', value: /^[a-zA-Z]+$/, message: 'First name can only contain letters' },
+      ],
+      lname: [
+        { type: 'required', message: 'Last Name is required' },
+        { type: 'minLength', value: 3, message: 'Last Name must be at least 3 characters' },
+        { type: 'maxLength', value: 10, message: 'Last Name cannot exceed 10 characters' },
+        { type: 'pattern', value: /^[a-zA-Z]+$/, message: 'Last Name can only contain letters' },
+      ],
+      handle: [
+        { type: 'required', message: 'Handle is required' },
+      ],
+    }
+
+    const validate = validateJson(formData, rule);
+
+    setErrors(validate.errors);
+    if (!validate.isValid) {
+      return
+    }
+
+    if (isEditing) {
+      dispatch(editTodo({
+        id: editId,
+        data: { ...formData }
+      }));
+      setIsEditing(false);
+      setEditId(null)
+    } else {
+      dispatch(addTodo({
+        ...formData,
+        id: uuidv4()
+      }));
+    }
   };
 
   const handleDelete = (id) => {
@@ -72,7 +95,7 @@ const Counter = () => {
       });
       setIsEditing(true);
       setEditId(id);
-    }   
+    }
   }
 
   return (
@@ -92,21 +115,24 @@ const Counter = () => {
                 <input
                   name="fname"
                   value={formData.fname || ''}
-                  className={`form-control mb-2 mr-2 ${errors.fname ?  'is valid' : ''}`}
+                  className={`form-control mb-2 mr-2 ${errors.fname ? 'is valid' : ''}`}
                   onChange={(e) => handleinputChange(e)}
                   placeholder="First Name" />
+                  {errors.fname && <span className="text-danger">{errors.fname}</span>}
                 <input
                   name="lname"
                   value={formData.lname || ''}
                   className={`form-control mb-2 mr-2 ${errors.lname ? 'is valid' : ''}`}
                   onChange={(e) => handleinputChange(e)}
                   placeholder="Last Name" />
+                  {errors.lname && <span className="text-danger">{errors.lname}</span>}
                 <input
                   name="handle"
                   value={formData.handle || ''}
                   className={`form-control mb-2 mr-2 ${errors.handle ? 'is valid' : ''}`}
                   onChange={(e) => handleinputChange(e)}
                   placeholder="Handle Use" />
+                  {errors.handle && <span className="text-danger">{errors.handle}</span>}
                 <button type="submit" className="btn btn-success mb-2">{isEditing ? 'Update' : 'Add'}</button>
               </div>
             </div>
