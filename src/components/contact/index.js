@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { v4 as uuidv4 } from 'uuid'
 
 const Contact = () => {
+    const [errors, setErrors] = useState({});
+    const [showModal, setShowModal] = useState(false);
     const query = useSelector((store) => store.query.query);
     const dispatch = useDispatch();
 
@@ -13,10 +15,7 @@ const Contact = () => {
         email: '',
         subject: '',
         message: '',
-    })
-
-    const [errors, setErrors] = useState({});
-    const [showModal, setShowModal] = useState(false);
+    })   
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -119,7 +118,7 @@ const Contact = () => {
                             <div className="modal-body">
                                 <form onSubmit={handleSubmit}>
                                     <div className="form-group">
-                                        <label htmlFor="name">First Name</label>
+                                        <label htmlFor="name">Full Name</label>
                                         <input
                                             type="text"
                                             className={`form-control form-control-sm ${errors.name ? 'is-invalid' : ''}`}

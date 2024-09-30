@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './assets/css/joeblog.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -9,12 +10,12 @@ import Sidebar from './components/Sidebar/index';
 import Users from './components/Users';
 import Todos from './components/Todos';
 import Album from './components/Album';
-import './assets/css/joeblog.css';
 import Filter from './components/Filter';
 import Counter from './components/Counter'
 import Product from './components/Product';
 import Category from './components/Category';
 import AdminProduct from './components/Admin/Product';
+import Practice from './components/Practice';
 
 function App() {
   return (
@@ -33,9 +34,10 @@ function App() {
           <Route path='/counter' element= {<Counter />} />
           <Route path='/product' element={<Product />} />
           <Route path='/category' element={<Category />} />
-          <Route path='/admin/product' element={<AdminProduct />} />       
+          <Route path='/admin/product' element={<AdminProduct />} /> 
+          <Route path='/practice' element={<Practice />} />
 
-        </Routes>
+        </Routes>   
       </main>
       <Footer />
     </Router>

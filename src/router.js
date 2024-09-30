@@ -11,6 +11,7 @@ import Counter from "./components/Counter";
 import Product from "./components/Product";
 import Category from "./components/Category";
 import AdminProduct from "./components/Admin/Product";
+import Practice from "./components/Practice";
 
 const Router = createBrowserRouter([
     {
@@ -61,6 +62,10 @@ const Router = createBrowserRouter([
         path: '/admin/product',
         element: <AdminProduct />
     }, 
+    {
+        path: '/practice',
+        element: <Practice />
+    }
 
 ])
 

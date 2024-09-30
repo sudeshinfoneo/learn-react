@@ -21,15 +21,6 @@ const Counter = () => {
     })
   }
 
-  const validateForm = () => {
-    const newErrors = {};
-    if (!formData.fname) newErrors.fname = 'First Name is Required';
-    if (!formData.lname) newErrors.lname = 'Last Name is Required';
-    if (!formData.handle) newErrors.handle = 'Handle is Required';
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  }
-
   const handleincrement = () => {
     dispatch(increment())
   }
@@ -106,6 +97,7 @@ const Counter = () => {
         <button className="btn btn-secondary " onClick={(e) => handledecrement(e)}><b>Decrement</b></button>
       </div>
       <hr />
+      
       <div>
         <div className='mb-4'>
           <form onSubmit={handleAddorUpdate}>
