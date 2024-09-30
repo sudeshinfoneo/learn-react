@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './assets/css/joeblog.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -9,7 +10,6 @@ import Sidebar from './components/Sidebar/index';
 import Users from './components/Users';
 import Todos from './components/Todos';
 import Album from './components/Album';
-import './assets/css/joeblog.css';
 import Filter from './components/Filter';
 import Counter from './components/Counter'
 import Product from './components/Product';
@@ -33,9 +33,8 @@ function App() {
           <Route path='/counter' element= {<Counter />} />
           <Route path='/product' element={<Product />} />
           <Route path='/category' element={<Category />} />
-          <Route path='/admin/product' element={<AdminProduct />} />       
-
-        </Routes>
+          <Route path='/admin/product' element={<AdminProduct />} />         
+        </Routes>   
       </main>
       <Footer />
     </Router>

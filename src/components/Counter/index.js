@@ -83,6 +83,7 @@ const Counter = () => {
         <button className="btn btn-secondary " onClick={(e) => handledecrement(e)}><b>Decrement</b></button>
       </div>
       <hr />
+      
       <div>
         <div className='mb-4'>
           <form onSubmit={handleAddorUpdate}>
