@@ -27,6 +27,16 @@ const Practice = () => {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
+            <hr />
+
+            <button 
+            type="button" 
+            class="btn btn-secondary" 
+            data-container="body" 
+            data-toggle="popover" 
+            data-placement="left" 
+            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">  Popover          
+            </button>
         </>
     )
 }
